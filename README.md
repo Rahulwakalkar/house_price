@@ -14,7 +14,7 @@ Best model selection
 ##project structure
 house/
 │
-├── artifacts/                 # Saved models & preprocessors
+├── artifacts/                 
 │
 ├── src/
 │   └── house_price/
@@ -31,6 +31,8 @@ house/
 ├── .env
 ├── requirements.txt
 └── README.md
+|__ setup.py
+|__ template.py
 
 
 
