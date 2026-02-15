@@ -69,8 +69,6 @@ RMSE (Root Mean Squared Error)
 MAE (Mean Absolute Error)
 R² Score
 
-Best model is selected based on highest R² score.
-
 
 
 
