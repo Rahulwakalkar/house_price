@@ -71,7 +71,7 @@ class DataTransformation:
 
             target_column_name = "SalePrice"
 
-            # Drop ID column if exists
+            # Drop ID column 
             if "Id" in train_df.columns:
                 train_df = train_df.drop(columns=["Id"])
                 test_df = test_df.drop(columns=["Id"])
@@ -92,20 +92,20 @@ class DataTransformation:
             X_train_arr = preprocessing_obj.fit_transform(X_train)
             X_test_arr = preprocessing_obj.transform(X_test)
 
-         # Convert sparse matrix to dense if needed
+         # Converting sparse matrix to dense if needed
             if hasattr(X_train_arr, "toarray"):
               X_train_arr = X_train_arr.toarray()
             if hasattr(X_test_arr, "toarray"):
               X_test_arr = X_test_arr.toarray()
 
-           # Ensure features are 2D
+           #  features in 2D
             if X_train_arr.ndim == 1:
               X_train_arr = X_train_arr.reshape(-1, 1)
             if X_test_arr.ndim == 1:
                 X_test_arr = X_test_arr.reshape(-1, 1)
 
 
-            # Ensure target is 2D
+            #  target in 2D
             y_train_arr = y_train.to_numpy().reshape(-1, 1)
             y_test_arr = y_test.to_numpy().reshape(-1, 1)
 
